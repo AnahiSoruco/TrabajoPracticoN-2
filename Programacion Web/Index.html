@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismos</title>
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!--BOOSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+
+    <!-- Navbar Bootstrap: reemplaza el sidebar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Turismo Jujuy</a>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Opciones del menú -->
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+        <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
+        <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+        <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <section class="video-box">
+        <video autoplay muted loop class="video-fondo">
+            <source src="Videos/Paise.mp4" type="video/mp4">
+        </video>
+
+        <!--Texto animado con JQuey-->
+        <div class="texto-video">
+            <h1 class="titulo-animado">Bienvenido a Jujuy</h1>
+            <p class="subtitulo-animado">Descubre lugares increíbles</p>
+
+        </div>
+
+    </section>
+
+    <!-- Cards Bootstrap: diseño responsive con grilla -->
+     <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+      <div class="card shadow">
+        <img src="Imagenes/Purmamarca.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5>Purmamarca</h5>
+          <p>Cerro de los Siete Colores</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="Imagenes/Salinas.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5>Salinas Grandes</h5>
+          <p>Un desierto blanco increíble</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="Imagenes/Tilcara.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5>Tilcara</h5>
+          <p>Cultura y tradición viva</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!---->
+
+    <!-- Contador animado con jQuery -->
+     <div class="text-center my-5">
+        <h2 id="contador">0</h2>
+        <p>Visitantes felices</p>
+    </div>
+    <!---->
+
+    <!-- Carousel Bootstrap: testimonios -->
+     <div id="carouselTestimonios" class="carousel slide container my-5" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+            
+            <div class="carousel-item active">
+                <p>"La mejor experiencia en las Salinas Grandes"</p>
+                <h5>- Juan Pérez</h5>
+            </div>
+            
+            <div class="carousel-item">
+                <p>"Purmamarca me robó el corazón"</p>
+                <h5>- Ana García</h5>
+            </div>
+            
+            <div class="carousel-item">
+                <p>"Excelente atención en Tilcara"</p>
+                <h5>- Carlos Ruiz</h5>
+            </div>
+        </div>
+    </div>
+<!---->
+    
+
+    <footer class="footer-site">
+        <div class="footer-container">
+        
+        
+        <div class="footer-section">
+            <h3>Suscríbete</h3>
+            <p>Recibe ofertas de Jujuy en tu mail.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu email aquí..." required>
+                <button type="submit">Unirse</button>
+            </form>
+        </div>
+
+        <div class="footer-section">
+            <h3>Síguenos</h3>
+            <ul class="social-3d">
+                <li class="facebook">
+                    <span></span><span></span><span></span><span></span>
+                    <span><i class="fab fa-facebook-f"></i> Facebook</span>
+                </li>
+                <li class="twitter">
+                    <span></span><span></span><span></span><span></span>
+                    <span><i class="fab fa-twitter"></i> Twitter</span>
+                </li>
+                <li class="instagram">
+                    <span></span><span></span><span></span><span></span>
+                    <span><i class="fab fa-instagram"></i> Instagram</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Ubicación</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.3934427432424!2d-65.29963730064419!3d-24.186355525050494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f4313922973%3A0x552c0eaeb6432a0!2sPlaza%20Belgrano!5e0!3m2!1ses-419!2sar!4v1776184793505!5m2!1ses-419!2sar" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        
+    </div>
+    
+</footer>
+
+<!-- jQuery: librería para animaciones -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS: funcionalidades como navbar y carousel -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script propio -->
+<script src="Js/Animacion-Index.js"></script>
+
+</body>
+</html>
