@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismos</title>
+
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Styles/Style.precios.css">
+</head>
+<body>
+    
+    <nav class="sidebar">
+        <ul class="nav-list">
+
+        <!-- Inicio -->
+
+        <li class="nav-item">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i>
+                <span>Inicio</span>
+            </a>
+        </li>
+
+        
+        <li class="nav-item">
+            <a href="destinos.html" class="nav-link">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Destinos</span>
+            </a>
+        </li>
+
+        
+        <li class="nav-item">
+            <a href="agencias.html" class="nav-link">
+                <i class="fas fa-layer-group"></i>
+                <span>Agencias</span>
+            </a>
+        </li>
+
+        
+        <li class="nav-item">
+            <a href="precios.html" class="nav-link active">
+                <i class="fas fa-chart-pie"></i>
+                <span>Precios</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="Contacto.html" class="nav-link">
+                <i class="fas fa-envelope"></i>
+                <span>Precios</span>
+            </a>
+        </li>
+    </ul>
+    </nav>
+
+    <section class="precios">
+
+      <div class="container my-5">
+
+        <!--Tabla-->
+  <h2 class="text-center mb-4 text-white">Planes de Turismo</h2>
+
+  <div class="table-responsive">
+    <table class="table table-dark table-hover text-center align-middle">
+
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Precio</th>
+          <th>Incluye</th>
+        </tr>
+      </thead>
+      
+      <!--Filas-->
+      <tbody>
+        <tr class="fila">
+          <td>Cerro de los 7 colores</td>
+          <td>$5000</td>
+          <td><span data-bs-toggle="tooltip" title="Incluye guía profesional">Guía</span></td>
+        </tr>
+        
+        <tr class="fila">
+          <td>Salinas Grandes</td>
+          <td>$4500</td>
+          <td><span data-bs-toggle="tooltip" title="Incluye traslado ida y vuelta">Transporte</span></td>
+        </tr>
+
+        <tr class="fila">
+          <td>Quebrada de Humahuaca</td>
+          <td>$6000</td>
+          <td><span data-bs-toggle="tooltip" title="Incluye comidas, guía y transporte">Todo incluido</span></td>
+        </tr>
+
+        <tr class="fila">
+          <td>Parque Nacional Calilegua</td>
+          <td>$8000</td>
+    <td><span data-bs-toggle="tooltip" title="Guía especializado y avistaje de fauna">Safari Fotográfico</span></td>
+  </tr>
+  
+  <tr class="fila">
+    <td>Termas de Reyes</td>
+    <td>$3500</td>
+    <td><span data-bs-toggle="tooltip" title="Acceso a piletas y servicios">Pase Libre</span></td>
+  </tr>
+
+    <tr class="fila">
+      <td>Cascadas de Yala</td>
+      <td>$4000</td>
+      <td><span data-bs-toggle="tooltip" title="Caminata guiada por senderos">Trekking</span></td>
+    </tr>
+
+    <tr class="fila">
+      <td>Purmamarca</td>
+      <td>$5500</td>
+      <td><span data-bs-toggle="tooltip" title="Visita guiada + artesanías">Cultural</span></td>
+    </tr>
+
+    <tr class="fila">
+    <td>Tilcara</td>
+    <td>$4200</td>
+    <td><span data-bs-toggle="tooltip" title="Incluye visita al Pucará">Histórico</span></td>
+  </tr>
+
+  <tr class="fila">
+    <td>Yungas</td>
+    <td>$7000</td>
+    <td><span data-bs-toggle="tooltip" title="Excursión ecológica con guía">Naturaleza</span></td>
+  </tr>
+
+  <tr class="fila">
+    <td>Parque Xibi Xibi</td>
+    <td>$2000</td>
+    <td><span data-bs-toggle="tooltip" title="Recorrido libre + actividades">Recreativo</span></td>
+  </tr>
+
+</tbody>
+ </table>
+</div>
+
+</div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+  // Tooltips Bootstrap
+  $('[data-bs-toggle="tooltip"]').tooltip();
+
+  // Hover dinámico
+  $(".fila").hover(
+    function(){
+      $(this).css({
+        "transform": "scale(1.03)",
+        "box-shadow": "0 0 10px rgba(0,210,255,0.7)"
+      });
+    },
+    function(){
+      $(this).css({
+        "transform": "scale(1)",
+        "box-shadow": "none"
+      });
+    }
+  );
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Destinos</title>
+  <!-- Font Awesome -->
+  <link href="https://cloudflare.com" rel="stylesheet">
+    
+  <!-- LAS RUTAS DEBEN SER ESTAS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark text-white">
+
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Turismo Jujuy</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <!-- Cambiamos nav-lateral por navbar-nav ms-auto para alinearlo a la derecha -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <!-- El active va acá en el index -->
+                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Acá se lo sacás -->
+                        <a class="nav-link active" href="destinos.html"><i class="fas fa-map-marker-alt"></i> Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agencias.html"><i class="fas fa-layer-group"></i> Agencias</a>
+                    </li>
+                    <!-- ... los demás siguen igual ... -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="precios.html"><i class="fas fa-chart-pie"></i> Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 pt-5">
+        <h1 class="text-center my-4 text-info">Nuestros Destinos</h1>
+
+        <!-- FILTROS JQUERY -->
+        <div class="text-center mb-5">
+            <button class="btn btn-primary filtro" data-filter="all">Todos</button>
+            <button class="btn btn-outline-info filtro" data-filter="naturaleza">Naturaleza</button>
+            <button class="btn btn-outline-info filtro" data-filter="cultural">Cultural</button>
+            <button class="btn btn-outline-info filtro" data-filter="gastronomico">Gastronómico</button>
+            <button class="btn btn-outline-info filtro" data-filter="religioso">Religioso</button>
+            <button class="btn btn-outline-info filtro" data-filter="solyplaya">Sol y Playa</button>
+        </div>
+
+        <!-- GRID RESPONSIVE -->
+        <div class="row g-4">
+            
+          <!-- Ejemplo de Card Naturaleza -->
+          <div class="col-12 col-md-6 col-lg-4 destino naturaleza"> 
+            <div class="card" tabindex="0">
+              <img src="Imagenes/Salinas.jpeg" class="card-img-top" alt="Salinas">
+              <div class="card-body">
+                <h5 class="card-title">Salinas Grandes</h5>
+                <p class="card-text">Un desierto blanco a 3.450 metros de altura que parece infinito. Tercer salar más grande de Sudamérica.</p>
+              </div>
+            </div>
+          </div>
+        <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+          <div class="card zoom-card" tabindex="0">
+            <img src="Imagenes/Serranías del Hornocal.jpeg" class="card-img-top">
+            
+            <div class="card-body">
+              <h5 class="card-title">Serranías del Hornocal</h5>
+              <p class="card-text"> Conocidas como el Cerro de los 14 Colores, las Serranías del Hornocal son un imponente anfiteatro natural ubicado a 25 kilómetros de Humahuaca. A más de 4.300 metros de altura, sus formaciones en punta de flecha despliegan un abanico de tonalidades que van desde el amarillo y el verde hasta el rojo intenso, creando uno de los paisajes más dramáticos y bellos de toda la Argentina </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+          <div class="card zoom-card" tabindex="0">
+            <img src="Imagenes/Cascada de Yala.jpeg" class="card-img-top">
+
+            <div class="card-body">
+              <h5 class="card-title"> Cascadas de Yala </h5>
+              <p class="card-text"> Sumergite en el 'lado verde' de Jujuy. A pocos kilómetros de la capital, las Cascadas de Yala —como la famosa Cascada de La Horqueta— ofrecen un refugio de paz en medio de las yungas. Con saltos de agua cristalina que caen entre paredes de roca y una vegetación exuberante, es el destino perfecto para quienes buscan un trekking refrescante y una conexión directa con la selva de montaña. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 destino cultural">
+          <div class="card zoom-card" tabindex="0">
+            <img src="Imagenes/Quebrada de Humaguaca.jpeg" class="card-img-top">
+
+            <div class="card-body">
+              <h5 class="card-title">Quebrada de Humaguaca</h5>
+              <p class="card-text"> Declarada Patrimonio de la Humanidad, la Quebrada de Humahuaca es un valle andino de 155 kilómetros donde la historia y el color se funden. Sus montañas multicolores abrazan pueblos de adobe llenos de tradición, ferias artesanales y antiguas capillas coloniales. Es mucho más que un paisaje: es el corazón cultural de Jujuy, donde el tiempo parece detenerse entre cerros y coplas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 destino gastronomico">
+          <div class="card zoom-card" tabindex="0">
+            <img src="Imagenes/Empanadas.jpeg" class="card-img-top">
+
+            <div class="card-body">
+              <h5 class="card-title">Empanadas</h5>
+              <p class="card-text"> La empanada jujeña es un tesoro gastronómico que se distingue por su equilibrio de sabores. Preparada tradicionalmente con carne cortada a cuchillo, papa picada bien fina, cebolla de verdeo y huevo duro, su secreto está en el jugo y el toque de comino. Siempre acompañada por una buena llajua (salsa picante de tomate y locoto), es el bocado obligado que resume la identidad y el calor de los hogares andinos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+          <div class="card zoom-card" tabindex="0">
+            <img src="Imagenes/Quebrada de las Señoritas.jpg" class="card-img-top">
+
+            <div class="card-body">
+              <h5 class="card-title">Quebrada de las Señoritas</h5>
+              <p class="card-text">Un laberinto de formaciones rojas intensas que parecen sacadas del planeta Marte. Ubicada en el pueblo de Uquía, la Quebrada de las Señoritas es uno de los tesoros más impresionantes y menos masificados de Jujuy. Entre cañadones profundos y grietas tectónicas, sus paredes de color óxido guardan una leyenda ancestral sobre princesas incas y tesoros ocultos, ofreciendo una experiencia de trekking única bajo el cielo azul de la Puna.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 col-lg-4 destino gastronomico">
+          <div class="card zoom-card" tabindex="0">
+            <img src="Imagenes/Locro.jpeg" class="card-img-top">
+
+            <div class="card-body">
+              <h5 class="card-title">Locro</h5>
+              <p class="card-text"> El locro es el plato insignia del invierno y las fechas patrias en Jujuy. Este guiso prehispánico es una explosión de sabor y energía, cocinado a fuego lento con maíz blanco, porotos, zapallo plomo —que le da su cremosidad dorada— y diversos cortes de carne, como patitas de cerdo, panceta y chorizo colorado. Se corona siempre con la quiquirimichi (salsa de grasa, pimentón y verdeo), convirtiéndolo en un abrazo tibio al alma </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 col-lg-4 destino religioso"> 
+          <div class="card zoom-card" tabindex="0">
+            <img src="Imagenes/Iglesia.jpeg" class="card-img-top">
+            
+            <div class="card-body">
+              <h5 class="card-title"> Iglesia </h5>
+              <p class="card-text"> En pleno centro histórico de la capital, la Basílica de San Francisco se alza como un símbolo de fe y patrimonio. El templo actual, inaugurado en 1927, combina estilos neomanieristas y barrocos, destacando por su elegante torre de cuatro cuerpos y su cúpula octogonal. En su interior, el imponente púlpito tallado y los altares de mármol de Carrara crean una atmósfera de paz única, mientras que su Museo de Arte Sacro resguarda tesoros coloniales que cuentan la historia de la orden en el norte argentino </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 destino religioso"> 
+          <div class="card zoom-card" tabindex="0">
+            <img src="Imagenes/Yavi y su Marquesado.jpeg" class="card-img-top">
+
+            <div class="card-body">
+              <h5 class="card-title"> Yavi y su Marquesado </h5>
+              <p class="card-text"> Ubicado en el extremo norte de la Puna, Yavi es un oasis de paz que parece detenido en el siglo XVIII. Fue la sede del único Marquesado en territorio argentino: el de Tojo. Sus calles empedradas, sus casas de adobe y la imponente Iglesia de San Francisco, con sus altares laminados en oro y ventanas de alabastro, guardan los secretos de la nobleza colonial y la historia de las guerras de independencia </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 destino religioso"> 
+          <div class="card zoom-card" tabindex="0">
+            <img src="Imagenes/catedral .jpeg" class="card-img-top">
+
+            <div class="card-body">
+              <h5 class="card-title"> Catedral Basilica jujuy </h5>
+              <p class="card-text"> Ubicada frente a la Plaza Belgrano, la Catedral Basílica es uno de los tesoros arquitectónicos más antiguos del norte. Su fachada blanca y elegante esconde uno de los tesoros coloniales más valiosos de Argentina: su imponente púlpito tallado en madera de cedro, considerado una obra maestra del estilo barroco cuzqueño. Es el corazón espiritual de la ciudad, donde la historia de la fundación y el arte religioso se funden bajo sus naves de estilo neoclásico </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 destino religioso"> 
+          <div class="card zoom-card" tabindex="0">
+            <img src="Imagenes/semana santa.jpeg" class="card-img-top">
+
+            <div class="card-body">
+              <h5 class="card-title"> Semana Santa </h5>
+              <p class="card-text"> Vivir la Semana Santa en Jujuy es testigo de una devoción única. En la Quebrada, el silencio de los cerros se rompe con el sonido de los sicuris que acompañan a la Virgen de Copacabana del Abra de Punta Corral. El punto máximo de emoción son las Ermitas de Tilcara: cuadros gigantes hechos artesanalmente con semillas, flores y frutos que representan el Vía Crucis, convirtiendo las calles en una galería de arte natural y fe profunda </p>
+            </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 destino religioso"> 
+            <div class="card zoom-card" tabindex="0">
+              <img src="Imagenes/Peregrinacion.jpeg" class="card-img-top">
+
+              <div class="card-body">
+                <h5 class="card-title"> Peregrinacion </h5>
+                <p class="card-text"> La Peregrinación a la Virgen de Copacabana del Abra de Punta Corral es la mayor muestra de fe del NOA. Miles de fieles ascienden a casi 4.000 metros de altura por cerros imponentes, en una travesía que combina devoción religiosa y cultura andina. El regreso de la Virgen es un espectáculo único: baja acompañada por cientos de bandas de sicuris cuyo sonido de cañas resuena en toda la Quebrada, creando un clima de emoción espiritual inigualable </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-6 col-lg-4 destino cultural">
+            <div class="card zoom-card" tabindex="0">
+              <img src="Imagenes/maimara.jpeg" class="card-img-top">
+              
+              <div class="card-body">
+                <h5 class="card-title"> Maimará </h5>
+                <p class="card-text">En el corazón de la Quebrada de Humahuaca, Maimará cautiva con su famosa Paleta del Pintor, una formación montañosa de colores intensos que parecen pinceladas sobre el cerro. Este pueblo, rodeado de huertas y viñedos de altura, invita a la contemplación y al descanso. Es un destino donde el tiempo transcurre lento entre sus calles tranquilas, su histórico Cementerio de Altura y el colorido de sus tradicionales festejos de Carnava.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 destino cultural">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/Museo de los cerros.jpeg" class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="card-title"> Museo de los cerros </h5>
+                  <p class="card-text"> Ubicado en el paraje de Huichaira (cerca de Tilcara), el Museo en los Cerros (MEC) es un espacio dedicado a la fotografía que se integra perfectamente con el paisaje andino. Diseñado con materiales locales como piedra y adobe, este museo busca tender un puente entre el arte contemporáneo y la cultura regional, ofreciendo una experiencia de silencio y contemplación única en medio de la naturaleza </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 destino cultural">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/Cine Teatro Municipal Select.jpeg" class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="card-title"> Cine Teatro Municipal Select </h5>
+                  <p class="card-text">  Más que una sala, el Cine Teatro Municipal Select es el guardián de la memoria audiovisual de la ciudad. Con más de un siglo de vida, este histórico edificio fue rescatado de la demolición para convertirse en un centro cultural vibrante. Hoy es sede de ciclos de cine independiente, festivales internacionales como el de las Alturas y talleres artísticos, consolidándose como un espacio de encuentro inclusivo donde la arquitectura clásica se une con la expresión artística moderna </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 destino cultural">
+              <div class="card zoom-card" tabindex="0">
+                 <img src="Imagenes/Santa Catalina.jpeg" class="card-img-top">
+
+                 <div class="card-body">
+                  <h5 class="card-title"> Santa Catalina </h5>
+                  <p class="card-text"> Ubicado en el extremo norte de la Puna, Santa Catalina es uno de los pueblos más septentrionales y auténticos de Argentina. A más de 3.700 metros de altura, este rincón de casas de adobe y techos de paja parece detenido en el tiempo. Rodeado de cerros áridos y rebaños de llamas, es el destino ideal para los viajeros que buscan silencio absoluto, cielos estrellados y una conexión profunda con las tradiciones más puras de la cultura andina </p>
+                 </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-4 destino cultural">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/pucara de tilcara.jpeg" class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="card-title"> Pucara de Tilcara </h5>
+                  <p class="card-text"> El Pucará de Maimará, también conocido como el "Pucará de la Loma de Hornillos", es un sitio arqueológico estratégico ubicado sobre una colina que domina el valle. Esta antigua fortaleza omaguaca, construida con muros de piedra, servía como punto de vigilancia y defensa hace siglos. Hoy, caminar entre sus restos permite no solo conectar con el pasado prehispánico de la región, sino también disfrutar de una vista privilegiada de la Paleta del Pintor y el pueblo de Maimará desde la altura</p>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+                <div class="card zoom-card" tabindex="0">
+                  <img src="Imagenes/Monumento Natural Laguna de los Pozuelos.jpg" class="card-img-top">
+
+                  <div class="card-body">
+                  <h5 class="info">Monumento Natural Laguna de los Pozuelos</h5>
+                    <p class="card-text"> Un oasis de vida en la inmensidad de la Puna. A 3.600 metros de altura, la Laguna de los Pozuelos es uno de los humedales más importantes del mundo y hogar de miles de flamencos rosados. Este espejo de agua, rodeado de cerros áridos, es un santuario de biodiversidad donde el silencio solo es interrumpido por el canto de las aves, ofreciendo uno de los paisajes más salvajes y conmovedores del extremo norte argentin </p>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+                <div class="card zoom-card" tabindex="0">
+                  <img src="Imagenes/Cuesta del Lipán.jpg" class="card-img-top">
+
+                  <div class="card-body">
+                  <h5 class="info">Cuesta del Lipán </h5>
+                    <p class="card-text"> Considerada una de las carreteras más espectaculares de Argentina, la Cuesta del Lipán es un zigzagueante camino de asfalto que trepa la montaña hasta alcanzar los 4.170 metros de altura. Con curvas cerradas que parecen pinceladas en el cerro, este tramo de la Ruta 52 une el pueblo de Purmamarca con las Salinas Grandes, ofreciendo vistas panorámicas vertiginosas y la increíble sensación de estar tocando las nubes </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+                <div class="card zoom-card" tabindex="0">
+                  <img src="Imagenes/Garganta del Diablo.jpg" class="card-img-top">
+
+                  <div class="card-body">
+                  <h5 class="info">Garganta del Diablo </h5>
+                    <p class="card-text"> Una grieta profunda y majestuosa en el corazón de la montaña. La Garganta del Diablo es un imponente cañón de paredes verticales ubicado a pocos kilómetros de Tilcara. Tras una caminata entre formaciones rocosas, el sendero revela una caída de agua cristalina y vistas vertiginosas que muestran la fuerza erosiva de la naturaleza. Es el destino perfecto para quienes buscan aventura y una perspectiva diferente de la Quebrada </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/Yungas.jpeg" class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="info"> Yungas></h5>
+                  <p class="card-text"> El contraste inesperado de Jujuy. Las Yungas son una selva de montaña exuberante que envuelve el este provincial en un manto de nubes y biodiversidad. Entre ríos cristalinos, helechos gigantes y una fauna fascinante —donde reina el yaguareté—, este ecosistema ofrece un paisaje de verde infinito que rompe con la aridez de la Puna. Es el escenario ideal para el senderismo, el avistaje de aves y la aventura en estado puro </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 destino naturaleza">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/Parque Nacional Calilegua.jpeg" class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="info"> Parque Nacional de Calilegua></h5>
+                  <p class="card-text"> El guardián de la selva jujeña. Con más de 76.000 hectáreas, Calilegua es el parque nacional más grande del Noroeste Argentino y el refugio principal de las Yungas. Es un paraíso de biodiversidad donde conviven cientos de especies de aves, monos caí y el majestuoso yaguareté. Sus senderos atraviesan distintos niveles de selva y montaña, ofreciendo una experiencia de naturaleza virgen, aire puro y paisajes de un verde infinito que sorprenden en cada rincón </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 destino naturaleza">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/Paleta del Pintor.jpg" class="card-img-top">
+
+              <div class="card-body">
+                <h5 class="info"> Paleta del Pinto></h5>
+                <p class="card-text"> Un lienzo natural grabado en la montaña. La Paleta del Pintor es una formación geológica que abraza al pueblo de Maimará, famosa por sus imponentes pliegues de colores que parecen pinceladas de un artista gigante. Sus tonalidades ocres, rojizas y amarillas alcanzan su máximo esplendor al atardecer, cuando la luz del sol resalta cada matiz, convirtiéndola en una de las postales más artísticas y fotografiadas de toda la Quebrada de Humahuaca </p>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 destino gastronomico">
+              <div class="card zoom-card" tabindex="0">
+                 <img src="Imagenes/Tameles.jpeg" class="card-img-top">
+
+                 <div class="card-body">
+                  <h5 class="info"> Tamales ></h5>
+                  <p class="card-text"> Un bocado con siglos de historia. El tamal jujeño es una delicadeza andina elaborada con una masa de maíz amarillo rellena de carne (generalmente de cabeza de cerdo o vaca) finamente picada y sazonada con comino, pimentón y cebolla de verdeo. Envueltos cuidadosamente en chala (hoja seca de maíz) y cocidos al vapor, estos 'paquetitos' guardan un interior tierno y jugoso que es un clásico indiscutible de las ferias y mesas familiares del norte </p>                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 destino gastronomico">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/Humitas.jpeg" class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="info"> Humitas ></h5>
+                  <p class="card-text"> La humita es el corazón del maíz hecho manjar. A diferencia del tamal, se elabora con granos de maíz fresco (choclo) rallado, que se mezcla con un sofrito de cebolla, pimentón y abundante queso de cabra o vaca. Envueltas en sus propias hojas verdes y atadas en forma de paquetito, pueden ser saladas o dulces (con azúcar y anís). Es una receta ancestral, cremosa y llena de sol, que representa la esencia más pura de la cosecha andina </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 destino gastronomico">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/Mercado Regional.jpeg" class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="info"> Mercado Regional ></h5>
+                  <p class="card-text"> Los mercados de Jujuy son el alma palpitante de sus pueblos. Espacios como el Mercado Central de San Salvador o el Mercado de Tilcara son un festín para los sentidos: entre pasillos llenos de aroma a especias y hierbas medicinales, podés encontrar desde tejidos de lana de llama y artesanías en cerámica hasta los sabores más auténticos de la Puna. Es el lugar donde la comunidad se encuentra y donde el viajero descubre la verdadera identidad jujeña a través de sus productos y su gente </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 destino gastronomico">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/Ruta del Vino.jpeg" class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="info"> Ruta del Vino ></h5>
+                  <p class="card-text"> Una experiencia de altura que desafía los límites. La Ruta del Vino de Jujuy es una de las más altas del mundo, con viñedos que crecen entre los 2.000 y 3.300 metros sobre el nivel del mar. En bodegas boutique ubicadas en plena Quebrada de Humahuaca, como en Purmamarca, Maimará y Huacalera, se producen tintos intensos —especialmente el Malbec y el Syrah— que capturan el sol de la Puna y el carácter mineral de los cerros de colores </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 destino solyplaya">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/Parque Xibi Xibi.jpeg"class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="info"> Parque Xibi-Xibi ></h5>
+                  <p class="card-text"> El Parque Lineal Xibi Xibi es el pulmón verde que transformó el centro de San Salvador de Jujuy. Este espacio recreativo corre a lo largo del cauce del río homónimo, conectando la ciudad con la naturaleza a través de ciclovías, sendas peatonales y áreas de ejercicio. Es el lugar favorito de los jujeños para caminar, tomar mate al aire libre y disfrutar de un paisaje urbano moderno que respeta el entorno natural del río </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 destino solyplaya">
+              <div class="card zoom-card" tabindex="0">
+                 <img src="Imagenes/termas de reyes.jpeg" class="card-img-top">
+
+                 <div class="card-body">
+                  <h5 class="info">Termas de Reyes</h5>
+                  <p class="card-text"> Conocidas como el 'Balcón de Jujuy', las Termas de Reyes son un santuario de bienestar en medio de la selva de montaña. A solo 19 km de la capital, sus aguas ricas en minerales brotan a más de 50°C entre cerros cubiertos de verde intenso. Es el lugar perfecto para desconectarse del mundo, disfrutar de baños curativos y maravillarse con una vista panorámica privilegiada de las Yungas </p>
+               </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 destino solyplaya">
+              <div class="card zoom-card" tabindex="0">
+                 <img src="Imagenes/dique las cienagas.jpeg"class="card-img-top">
+
+                 <div class="card-body">
+                  <h5 class="info"> Dique las Cienagas </h5>
+                  <p class="card-text"> Ubicado cerca de El Carmen, el Dique Las Maderas (que forma parte del complejo Las Ciénagas) es el espejo de agua más grande de la zona de los Pericos. Rodeado de cerros verdes, es un paraíso para los amantes de la pesca de pejerrey y los deportes náuticos como el kayak o la navegación a vela, ofreciendo un paisaje tranquilo y fresco que contrasta con la aridez del norte </p>
+                 </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 destino solyplaya">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/balnearios municipal de el carmen.jpeg" class="card-img-top">
+
+                 <div class="card-body">
+                   <h5 class="info"> Balnearios Municipal de el Carmen </h5>
+                   <p class="card-text">  El Balneario Municipal de El Carmen es el refugio favorito para combatir el calor en Jujuy. Ubicado al pie del dique La Ciénaga, este complejo cuenta con una enorme pileta, amplios espacios verdes con asadores y toda la infraestructura para pasar un día en familia. Es el punto de encuentro por excelencia durante el verano, combinando la frescura del agua con un entorno natural de cerros y mucha tranquilidad </p>
+                 </div>
+              </div>
+            </div>
+
+             <div class="col-md-6 col-lg-4 destino solyplaya">
+              <div class="card zoom-card" tabindex="0">
+                <img src="Imagenes/el bananal y rios de las yungas.jpeg" class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="info"> El Bananal y Rios de las Yungas.jpeg </h5>
+                  <p class="card-text"> Un oasis de vida en la inmensidad de la Puna. A 3.600 metros de altura, la Laguna de los Pozuelos es uno de los humedales más importantes del mundo y el hogar predilecto de miles de flamencos rosados. Este espejo de agua, rodeado de cerros áridos, es un santuario de biodiversidad donde el silencio solo es interrumpido por el canto de las aves, ofreciendo uno de los paisajes más salvajes y conmovedores del extremo norte argentino </p>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        <!-- TABLA DE PRECIOS RESPONSIVE -->
+        <div class="mt-5 pt-5">
+            <h2 class="text-center text-info mb-4">Tarifas de Excursiones</h2>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover border-info">
+                    <thead>
+                        <tr><th>Destino</th><th>Duración</th><th>Precio</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Purmamarca</td><td>Día Completo</td><td>$45.000</td></tr>
+                        <tr><td>Iruya</td><td>12 Horas</td><td>$65.000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Animacion-Destino.js"></script>
+</body>
+</html>

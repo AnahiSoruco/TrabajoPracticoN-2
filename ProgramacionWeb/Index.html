@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Jujuy</title>
+
+    <!-- Font Awesome -->
+    <link href="https://cloudflare.com" rel="stylesheet">
+    
+    <!-- LAS RUTAS DEBEN SER ESTAS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Turismo Jujuy</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <!-- Cambiamos nav-lateral por navbar-nav ms-auto para alinearlo a la derecha -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <!-- El active va acá en el index -->
+                        <a class="nav-link active" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Acá se lo sacás -->
+                        <a class="nav-link" href="destinos.html"><i class="fas fa-map-marker-alt"></i> Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agencias.html"><i class="fas fa-layer-group"></i> Agencias</a>
+                    </li>
+                    <!-- ... los demás siguen igual ... -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="precios.html"><i class="fas fa-chart-pie"></i> Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Video Hero Section -->
+    <section class="video-box">
+        <!-- El video va primero -->
+        <video autoplay muted loop playsinline class="video-fondo">
+            <source src="Videos/Paise.mp4" type="video/mp4">
+        </video>
+
+        <!-- El texto va después, para que el z-index lo suba -->
+        <div class="texto-video">
+            <h1 class="titulo-animado">Bienvenido a Jujuy</h1>
+            <p class="subtitulo-animado">Descubre lugares increíbles</p>
+        </div>
+    </section>
+
+
+    <!-- Cards Section -->
+    <section class="container my-5">
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="card shadow h-100">
+                    <img src="Imagenes/Purmamarca.jpeg" class="card-img-top" alt="Purmamarca">
+                    <div class="card-body">
+                        <h5>Purmamarca</h5>
+                        <p>Cerro de los Siete Colores</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card shadow h-100">
+                    <img src="Imagenes/Salinas.jpeg" class="card-img-top" alt="Salinas">
+                    <div class="card-body">
+                        <h5>Salinas Grandes</h5>
+                        <p>Un desierto blanco increíble</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card shadow h-100">
+                    <img src="Imagenes/Tilcara.jpeg" class="card-img-top" alt="Tilcara">
+                    <div class="card-body">
+                        <h5>Tilcara</h5>
+                        <p>Cultura y tradición viva</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contador con jQuery -->
+    <div class="text-center my-5 py-4">
+        <h2 id="contador">0</h2>
+        <p>Visitantes felices</p>
+    </div>
+        <!-- Carousel Bootstrap: testimonios -->
+    <div id="carouselTestimonios" class="carousel slide container my-5" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+            
+            <div class="carousel-item active">
+                <p>"La mejor experiencia en las Salinas Grandes"</p>
+                <h5>- Juan Pérez</h5>
+            </div>
+            
+            <div class="carousel-item">
+                <p>"Purmamarca me robó el corazón"</p>
+                <h5>- Ana García</h5>
+            </div>
+            
+            <div class="carousel-item">
+                <p>"Excelente atención en Tilcara"</p>
+                <h5>- Carlos Ruiz</h5>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-site">
+    <div class="container"> <!-- El container centra todo -->
+        <div class="row text-center text-md-start"> <!-- La fila permite poner columnas lado a lado -->
+            
+            <!-- Suscríbete -->
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <h3>Suscríbete</h3>
+                <p>Recibe ofertas de Jujuy en tu mail.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email aquí..." required>
+                    <button type="submit" class="btn btn-cyan">Unirse</button>
+                </form>
+            </div>
+
+            <!-- Síguenos -->
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <h3>Síguenos</h3>
+                <ul class="social-3d">
+                    <li class="facebook"><span></span><span></span><span></span><span></span><span><i class="fab fa-facebook-f"></i> Facebook</span></li>
+                    <li class="twitter"><span></span><span></span><span></span><span></span><span><i class="fab fa-twitter"></i> Twitter</span></li>
+                    <li class="instagram"><span></span><span></span><span></span><span></span><span><i class="fab fa-instagram"></i> Instagram</span></li>
+                </ul>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="col-12 col-md-4">
+                <h3>Ubicación</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.3934427432424!2d-65.29963730064419!3d-24.186355525050494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f4313922973%3A0x552c0eaeb6432a0!2sPlaza%20Belgrano!5e0!3m2!1ses-419!2sar!4v1776184793505!5m2!1ses-419!2sar" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+    <!-- SCRIPTS LOCALES (Orden Correcto) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Animacion-Index.js"></script>
+
+</body>
+</html>
