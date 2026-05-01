@@ -45,16 +45,16 @@ if (form) {
     });
 }
 
-// --- ANIMACIONES CON JQUERY (ESPERA A QUE EL DOM ESTÉ LISTO) ---
+// --- ANIMACIONES CON JQUERY ---
 $(document).ready(function() {
 
-    // 1. ANIMACIÓN DE BIENVENIDA (Solo si existen los elementos)
+    // 1. ANIMACIÓN DE BIENVENIDA (Home)
     if ($(".titulo-animado").length) {
         $(".titulo-animado").hide().fadeIn(2000);
         $(".subtitulo-animado").hide().delay(1000).fadeIn(2000);
     }
 
-    // 2. CONTADOR DE VISITANTES (Solo en Index)
+    // 2. CONTADOR DE VISITANTES (Index)
     if ($("#contador").length) {
         let valorObjetivo = 1452; 
         $({ contador: 0 }).animate({ contador: valorObjetivo }, {
@@ -69,7 +69,7 @@ $(document).ready(function() {
         });
     }
 
-    // 3. CAROUSEL DE TESTIMONIOS
+    // 3. CAROUSEL DE TESTIMONIOS (Bootstrap 5)
     const carouselEl = document.querySelector('#carouselTestimonios');
     if (carouselEl) {
         new bootstrap.Carousel(carouselEl, {
@@ -79,58 +79,59 @@ $(document).ready(function() {
         });
     }
 
-    // 4. FILTROS DINÁMICOS DE DESTINOS (Unificado)
-    if ($(".filtro").length) {
-        $(".filtro").click(function() {
-            const filtro = $(this).data("filter");
-            
-            // Cambiar estilos de botones
-            $('.filtro').removeClass('active btn-info').addClass('btn-outline-info');
-            $(this).addClass('active btn-info');
-
-            // Animación de filtrado
-            $(".destino").fadeOut(300, function() {
-                if (filtro == "all") {
-                    $(".destino").fadeIn();
-                } else {
-                    $("." + filtro).fadeIn();
-                }
-            });
-        });
-    }
-
-    // 5. EFECTO EXTRA PARA CERRAR CARDS (Teclado)
-    $(document).keydown(function(e) {
-        if (e.keyCode === 27) { // Tecla Esc
-            $(':focus').blur(); 
-        }
-    });
-
-    console.log("Sistema de Turismo Jujuy listo para usar.");
-});
-$(document).ready(function() {
-    // 1. FILTROS DE DESTINOS
+    // 4. FILTROS DINÁMICOS (Página Destinos)
     $('.filtro').click(function() {
         const cat = $(this).data('filter');
-        $('.filtro').removeClass('btn-primary').addClass('btn-outline-light');
-        $(this).addClass('btn-primary').removeClass('btn-outline-light');
+        $('.filtro').removeClass('btn-primary active').addClass('btn-outline-info');
+        $(this).addClass('btn-primary active').removeClass('btn-outline-info');
 
-        if(cat == 'all') {
-            $('.destino').fadeIn();
-        } else {
-            $('.destino').hide();
-            $('.destino.' + cat).fadeIn();
+        $(".destino").fadeOut(300, function() {
+            if (cat == 'all') {
+                $(".destino").fadeIn();
+            } else {
+                $("." + cat).fadeIn();
+            }
+        });
+    });
+
+    // 5. EFECTO ZOOM (Página Destinos)
+    // Se asegura de no interferir con las cards de Agencias
+    $('.card').click(function(e) {
+        if ($(this).find('.card-inner').length === 0) {
+            e.stopPropagation();
+            $(this).toggleClass('expandida');
+            $('body').toggleClass('no-scroll');
         }
     });
 
-    // 2. EFECTO ZOOM AL HACER CLIC
-    $('.card').click(function(e) {
-        e.stopPropagation(); // Evita errores de clic
-        $(this).toggleClass('expandida');
-        $('body').toggleClass('no-scroll');
+    // --- SECCIÓN AGENCIAS (AUMENTO) ---
+
+    // 6. GIRO DE TARJETA (Efecto Flip)
+    $('.card-inner').click(function(e) {
+        e.stopPropagation();
+        $(this).toggleClass('girar');
     });
 
-    // 3. CERRAR AL HACER CLIC EN EL FONDO O TECLA ESC
+    // 7. SISTEMA DE RATING (Estrellas corregido)
+    $('.rating i').click(function(e) {
+        e.stopPropagation(); // Evita que la tarjeta gire al votar
+        
+        let valorSeleccionado = $(this).data('value');
+        let todasLasEstrellas = $(this).parent().children('i');
+
+        // Pintamos todas las estrellas que tengan un valor menor o igual a la clickeada
+        todasLasEstrellas.each(function() {
+            if ($(this).data('value') <= valorSeleccionado) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+        
+        console.log("Calificación guardada: " + valorSeleccionado);
+    });
+
+    // 8. CONTROLES DE CIERRE (Esc o Clic fuera)
     $(document).click(function() {
         $('.card').removeClass('expandida');
         $('body').removeClass('no-scroll');
@@ -139,7 +140,66 @@ $(document).ready(function() {
     $(document).keydown(function(e) {
         if (e.keyCode === 27) { // Tecla Esc
             $('.card').removeClass('expandida');
+            $('.card-inner').removeClass('girar'); // También resetea el giro
+            $(':focus').blur();
             $('body').removeClass('no-scroll');
         }
     });
+
+    console.log("Sistema de Turismo Jujuy iniciado correctamente.");
+
+
+
+        /* --- AUMENTO PARA AGENCIAS (FLIP Y RATING) --- */
+
+    // 1. Efecto Flip (Giro al hacer clic)
+    // Usamos el contenedor '.card' que es el que envuelve al 'card-inner'
+    $('.card').click(function() {
+        $(this).find('.card-inner').toggleClass('girar');
+        console.log("Girando agencia...");
+    });
+
+    // 2. Sistema de estrellas (Rating)
+    $('.rating i').click(function(e) {
+        e.stopPropagation(); // IMPORTANTE: evita que la carta gire al calificar
+        
+        let valor = $(this).data('value');
+        let estrellas = $(this).parent().children('i');
+
+        // Marcamos las estrellas seleccionadas
+        estrellas.removeClass('active');
+        $(this).addClass('active').prevAll().addClass('active');
+        
+        console.log("Calificación: " + valor);
+    });
+    //Precio
+    // --- 2. SECCIÓN PRECIOS (Hover y Tooltips) ---
+    
+    // Inicializar Tooltips de Bootstrap 5
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+
+    // Hover dinámico en las filas de la tabla
+    $(".fila").hover(
+        function() {
+            $(this).css({
+                "transform": "scale(1.03)",
+                "box-shadow": "0 0 15px rgba(0,210,255,0.7)",
+                "transition": "all 0.3s ease",
+                "z-index": "10",
+                "position": "relative"
+            });
+        },
+        function() {
+            $(this).css({
+                "transform": "scale(1)",
+                "box-shadow": "none",
+                "z-index": "1"
+            });
+        }
+    );
+
+    console.log("🚀 Todos los sistemas de Jujuy (Precios y Agencias) listos.");
 });

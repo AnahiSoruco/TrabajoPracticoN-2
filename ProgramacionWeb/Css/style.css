@@ -232,7 +232,7 @@ body {
 /* Redes Sociales 3D Inclinadas */
 .social-3d {
     list-style: none;
-    padding: 0;
+    padding: 0 60px;
     display: flex;
     flex-direction: column;
     gap: 10px;

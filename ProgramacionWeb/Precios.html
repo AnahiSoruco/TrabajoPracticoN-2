@@ -11,53 +11,46 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="Styles/Style.precios.css">
+    <!-- LAS RUTAS DEBEN SER ESTAS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Css/Style.precios.css">
 </head>
 <body>
     
-    <nav class="sidebar">
-        <ul class="nav-list">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Turismo Jujuy</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Inicio -->
-
-        <li class="nav-item">
-            <a href="index.html" class="nav-link">
-                <i class="fas fa-home"></i>
-                <span>Inicio</span>
-            </a>
-        </li>
-
-        
-        <li class="nav-item">
-            <a href="destinos.html" class="nav-link">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Destinos</span>
-            </a>
-        </li>
-
-        
-        <li class="nav-item">
-            <a href="agencias.html" class="nav-link">
-                <i class="fas fa-layer-group"></i>
-                <span>Agencias</span>
-            </a>
-        </li>
-
-        
-        <li class="nav-item">
-            <a href="precios.html" class="nav-link active">
-                <i class="fas fa-chart-pie"></i>
-                <span>Precios</span>
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a href="Contacto.html" class="nav-link">
-                <i class="fas fa-envelope"></i>
-                <span>Precios</span>
-            </a>
-        </li>
-    </ul>
+            <div class="collapse navbar-collapse" id="menu">
+                <!-- Cambiamos nav-lateral por navbar-nav ms-auto para alinearlo a la derecha -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <!-- El active va acá en el index -->
+                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Acá se lo sacás -->
+                        <a class="nav-link" href="destinos.html"><i class="fas fa-map-marker-alt"></i> Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agencias.html"><i class="fas fa-layer-group"></i> Agencias</a>
+                    </li>
+                    <!-- ... los demás siguen igual ... -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="precios.html"><i class="fas fa-chart-pie"></i> Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <section class="precios">
@@ -147,32 +140,9 @@
 </div>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-$(document).ready(function(){
-
-  // Tooltips Bootstrap
-  $('[data-bs-toggle="tooltip"]').tooltip();
-
-  // Hover dinámico
-  $(".fila").hover(
-    function(){
-      $(this).css({
-        "transform": "scale(1.03)",
-        "box-shadow": "0 0 10px rgba(0,210,255,0.7)"
-      });
-    },
-    function(){
-      $(this).css({
-        "transform": "scale(1)",
-        "box-shadow": "none"
-      });
-    }
-  );
-
-});
-</script>
+<!-- Usamos tus archivos locales -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/Animacion-Index.js"></script>
 </body>
 </html>
