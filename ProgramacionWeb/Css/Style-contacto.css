@@ -115,6 +115,7 @@ button:hover {
   text-align: center;
   animation: aparecer 0.5s ease;
   box-shadow: 5px 15px 20px rgba(222, 15, 91, 0.57);
+  color: white;
 }
 
 @keyframes aparecer {
