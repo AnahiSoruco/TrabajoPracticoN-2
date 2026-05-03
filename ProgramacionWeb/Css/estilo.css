@@ -29,6 +29,9 @@
 .lipan{
     background-position: 100% 50%;
 }
+.garganta{
+    background-position: -3px 100%;
+}
 /* Integración con el efecto Zoom cuando se activa la card */
 .card-zoom:focus .sprite-naturaleza {
     height: 300px;
