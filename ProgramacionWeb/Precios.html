@@ -61,6 +61,7 @@
           <th>Destino</th>
           <th>Precio</th>
           <th>Incluye</th>
+          <th>Pago</th>
         </tr>
       </thead>
       
@@ -69,61 +70,91 @@
           <td>Cerro de los 7 colores</td>
           <td>$5000</td>
           <td><span data-bs-toggle="tooltip" title="Incluye guía profesional">Guía</span></td>
+          <td>
+            <button class="btn btn-success btn-sm" onclick="pagar()">Pagar</button>
+          </td>
         </tr>
         
         <tr class="fila">
           <td>Salinas Grandes</td>
           <td>$4500</td>
           <td><span data-bs-toggle="tooltip" title="Incluye traslado ida y vuelta">Transporte</span></td>
+          <td>
+            <button class="btn btn-success btn-sm" onclick="pagar()">Pagar</button>
+          </td>
         </tr>
 
         <tr class="fila">
           <td>Quebrada de Humahuaca</td>
           <td>$6000</td>
           <td><span data-bs-toggle="tooltip" title="Incluye comidas, guía y transporte">Todo incluido</span></td>
+          <td>
+            <button class="btn btn-success btn-sm" onclick="pagar()">Pagar</button>
+          </td>
         </tr>
 
         <tr class="fila">
           <td>Parque Nacional Calilegua</td>
           <td>$8000</td>
-    <td><span data-bs-toggle="tooltip" title="Guía especializado y avistaje de fauna">Safari Fotográfico</span></td>
-  </tr>
-  
-  <tr class="fila">
-    <td>Termas de Reyes</td>
-    <td>$3500</td>
-    <td><span data-bs-toggle="tooltip" title="Acceso a piletas y servicios">Pase Libre</span></td>
-  </tr>
-
-    <tr class="fila">
-      <td>Cascadas de Yala</td>
-      <td>$4000</td>
-      <td><span data-bs-toggle="tooltip" title="Caminata guiada por senderos">Trekking</span></td>
-    </tr>
-
-    <tr class="fila">
-      <td>Purmamarca</td>
-      <td>$5500</td>
-      <td><span data-bs-toggle="tooltip" title="Visita guiada + artesanías">Cultural</span></td>
-    </tr>
-
-    <tr class="fila">
-    <td>Tilcara</td>
-    <td>$4200</td>
-    <td><span data-bs-toggle="tooltip" title="Incluye visita al Pucará">Histórico</span></td>
-  </tr>
-
-  <tr class="fila">
-    <td>Yungas</td>
-    <td>$7000</td>
-    <td><span data-bs-toggle="tooltip" title="Excursión ecológica con guía">Naturaleza</span></td>
-  </tr>
-
-  <tr class="fila">
-    <td>Parque Xibi Xibi</td>
-    <td>$2000</td>
-    <td><span data-bs-toggle="tooltip" title="Recorrido libre + actividades">Recreativo</span></td>
-  </tr>
+          <td><span data-bs-toggle="tooltip" title="Guía especializado y avistaje de fauna">Safari Fotográfico</span></td>
+          <td>
+            <button class="btn btn-success btn-sm" onclick="pagar()">Pagar</button>
+          </td>
+        </tr>
+        
+        <tr class="fila">
+          <td>Termas de Reyes</td>
+          <td>$3500</td>
+          <td><span data-bs-toggle="tooltip" title="Acceso a piletas y servicios">Pase Libre</span></td>
+          <td>
+            <button class="btn btn-success btn-sm" onclick="pagar()">Pagar</button>
+          </td>
+        </tr>
+        
+        <tr class="fila">
+          <td>Cascadas de Yala</td>
+          <td>$4000</td>
+          <td><span data-bs-toggle="tooltip" title="Caminata guiada por senderos">Trekking</span></td>
+          <td>
+            <button class="btn btn-success btn-sm" onclick="pagar()">Pagar</button>
+          </td>
+        </tr>
+        
+        <tr class="fila">
+          <td>Purmamarca</td>
+          <td>$5500</td>
+          <td><span data-bs-toggle="tooltip" title="Visita guiada + artesanías">Cultural</span></td>
+          <td>
+            <button class="btn btn-success btn-sm" onclick="pagar()">Pagar</button>
+          </td>
+        </tr>
+        
+        <tr class="fila">
+          <td>Tilcara</td>
+          <td>$4200</td>
+          <td><span data-bs-toggle="tooltip" title="Incluye visita al Pucará">Histórico</span></td>
+          <td>
+            <button class="btn btn-success btn-sm" onclick="pagar()">Pagar</button>
+          </td>
+        </tr>
+        
+        <tr class="fila">
+          <td>Yungas</td>
+          <td>$7000</td>
+          <td><span data-bs-toggle="tooltip" title="Excursión ecológica con guía">Naturaleza</span></td>
+          <td>
+            <button class="btn btn-success btn-sm" onclick="pagar()">Pagar</button>
+          </td>
+        </tr>
+        
+        <tr class="fila">
+          <td>Parque Xibi Xibi</td>
+          <td>$2000</td>
+          <td><span data-bs-toggle="tooltip" title="Recorrido libre + actividades">Recreativo</span></td>
+          <td>
+            <button class="btn btn-success btn-sm" onclick="pagar()">Pagar</button>
+          </td>
+        </tr>
 
 </tbody>
  </table>
@@ -135,5 +166,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/Animacion-Index.js"></script>
+  <script src="Js/pago.js"></script>
+
 </body>
 </html>
