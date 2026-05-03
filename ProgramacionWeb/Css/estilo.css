@@ -1,4 +1,3 @@
-/* CONFIGURACIÓN DEL SPRITE DE NATURALEZA */
 .sprite-naturaleza {
     width: 100%;
     height: 250px;
@@ -9,19 +8,18 @@
     transition: 0.5s ease;
 }
 
-/* Coordenadas para cada paisaje (Ajustar según posición en tu foto) */
 .salinas { 
-    background-position: -3px 0%; /* Foto 1 (Fila 1, Col 1) */
+    background-position: -3px 0%;
 }
 
 .hornocal { 
-    background-position: 50% 0%; /* Foto 2 (Fila 1, Col 2) */
+    background-position: 50% 0%;
 }
 .cascada{
     background-position: 99.7% 0%;
 }
 .quebrada {
-    background-position: 0.4% 50%; /* Foto 3 (Fila 1, Col 3) */
+    background-position: 0.4% 50%;
 }
 .laguna{
     background-position: 50% 50%;
@@ -32,8 +30,156 @@
 .garganta{
     background-position: -3px 100%;
 }
-/* Integración con el efecto Zoom cuando se activa la card */
+.yungas{
+    background-position: 50% 100%;
+}
+.parque{
+    background-position: 100% 100%;
+}
+
 .card-zoom:focus .sprite-naturaleza {
+    height: 300px;
+    border-radius: 20px 20px 0 0;
+}
+
+.sprite-cultural {
+    width: 100%;
+    height: 250px;
+    background-image: url('../Imagenes/cultural-sprite.jpg');
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    border-radius: 15px 15px 0 0;
+    transition: 0.5s ease;
+}
+
+.humaguaca { 
+    background-position: 0% 0%; 
+}
+.maimara{
+    background-position: 50% 0%;
+}
+.museo{
+    background-position: 100% 0%;
+}
+.cine{
+    background-position: 0% 50%;
+}
+.catalina{
+    background-position: 50% 50%;
+}
+.pucara{
+    background-position: 100% 50%;
+}
+
+.card-zoom:focus .sprite-cultural {
+    height: 300px;
+    border-radius: 20px 20px 0 0;
+}
+
+.sprite-gastronomico {
+     width: 100%;
+    height: 250px;
+    background-image: url('../Imagenes/gastronomia-sprite.jpg');
+    background-repeat: no-repeat;
+    background-size: 300% 200%; 
+    border-radius: 15px 15px 0 0;
+    transition: 0.5s ease;
+}
+    
+.empanadas { 
+    background-position: 0% 0%; 
+}
+.locro {
+    background-position: 50% 0%;
+}
+.tamales{
+    background-position: 100% 0%;
+}
+.humitas{
+    background-position: 0% 100%;
+}
+.mercado{
+    background-position: 50% 100%;
+}
+.vino{
+    background-position: 100% 100%;
+}
+
+.card-zoom:focus .sprite-gastronomico {
+    height: 300px;
+    border-radius: 20px 20px 0 0;
+}
+
+.sprite-religioso {
+    width: 100%;
+    height: 250px;
+    background-image: url('../Imagenes/religioso-sprite.jpg');
+    background-repeat: no-repeat;
+    background-size: 350% 350%;  /* Imagen de 3x3 */
+    border-radius: 15px 15px 0 0;
+    transition: 0.5s ease;
+}
+.iglesia{
+    background-position: 0% 0%;
+}
+.yavi{
+    background-position: 50% 0%;
+}
+.catedral{
+    background-position: 100% 0%;
+}
+.semana{
+    background-position: 0% 50%;
+}
+.peregrinacion{
+    background-position: 50% 50%;
+}
+
+.card-zoom:focus .sprite-religioso {
+    height: 300px;
+    border-radius: 20px 20px 0 0;
+}
+
+.sprite-religioso {
+    width: 100%;
+    height: 250px;
+    background-image: url('../Imagenes/religioso-sprite.jpg');
+    background-repeat: no-repeat;
+    background-size: 350% 350%;
+    border-radius: 15px 15px 0 0;
+    transition: 0.5s ease;
+}
+
+.sprite-solyplaya {
+    width: 100%;
+    height: 250px;
+    background-image: url('../Imagenes/solyplaya-sprite.jpg');
+    background-repeat: no-repeat;
+    background-size: 300% 200%;
+    border-radius: 15px 15px 0 0;
+    transition: 0.5s ease;
+}
+.xibi-xibi{
+    background-position: 0% 0%;
+}
+
+.termas{
+    background-position: 50% 0%;
+}
+
+.dique{
+    background-position: 100% 0%;
+}
+
+.balnearios{
+    background-position: 0% 100%;
+}
+
+.rios{
+    background-position: 50% 100%;
+}
+
+.card-zoom:focus .sprite-solyplaya {
     height: 300px;
     border-radius: 20px 20px 0 0;
 }

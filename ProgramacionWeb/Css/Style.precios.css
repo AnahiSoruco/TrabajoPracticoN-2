@@ -1,6 +1,3 @@
-/* ==========================================================================
-   3. PÁGINA PRECIOS (TABLA NEÓN - DISEÑO RECUPERADO)
-   ========================================================================== */
 .precios {
     background-color: var(--bg-dark) !important;
     min-height: 100vh;
@@ -18,20 +15,16 @@
     margin-bottom: 50px;
 }
 
-/* Encabezado Celeste Sólido como tu diseño original */
-/* Encabezado con Degradado de Azul a Negro */
 .table thead th {
     background: linear-gradient(90deg, #00d2ff 0%, #0072ff 100%) !important;
-    color: #000 !important; /* Texto negro para que resalte */
+    color: #000 !important; 
     border: none !important;
     padding: 15px !important;
     text-transform: uppercase;
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3); /* Brillo hacia abajo */
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
 }
 
-
-/* Filas con fondo negro y líneas celestes */
 .table tbody tr {
     background-color: var(--bg-dark) !important;
     border-bottom: 1px solid rgba(0, 210, 255, 0.3) !important;
@@ -44,19 +37,14 @@
     border: none !important;
 }
 
-/* Hover Dinámico (Zoom manejado por JS) */
 .fila { cursor: help; }
 
-/* Estilo para los Tooltips de Bootstrap */
 .tooltip-inner {
     background-color: var(--primary-cyan) !important;
     color: #000 !important;
     font-weight: bold;
 }
 
-/* ==========================================================================
-   4. PÁGINA AGENCIAS (Efecto Flip)
-   ========================================================================== */
 .card-inner.girar { transform: rotateY(180deg) !important; }
 .card-front, .card-back {
     position: absolute; width: 100%; height: 100%; 
@@ -67,9 +55,6 @@
 .card-back { background: #111; transform: rotateY(180deg); display: flex; flex-direction: column; }
 .rating i.active { color: #ffc107 !important; text-shadow: 0 0 10px gold; }
 
-/* ==========================================================================
-   5. PÁGINA DESTINOS (Zoom)
-   ========================================================================== */
 .card-zoom.activo {
     position: fixed !important; top: 50% !important; left: 50% !important;
     transform: translate(-50%, -50%) !important; width: 90vw !important;
@@ -77,9 +62,6 @@
     background: var(--primary-cyan) !important; color: #000; border-radius: 20px;
 }
 
-/* ==========================================================================
-   6. CONTACTO Y FOOTER
-   ========================================================================== */
 .map-container {
     filter: grayscale(100%) invert(92%) contrast(83%);
     border-radius: 15px; overflow: hidden; border: 1px solid var(--primary-cyan);

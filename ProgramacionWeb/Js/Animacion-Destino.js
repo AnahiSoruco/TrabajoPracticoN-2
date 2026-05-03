@@ -13,14 +13,12 @@ $(document).ready(function() {
         }
     });
 
-    // 2. ZOOM AL HACER CLIC
     $('.card-zoom').click(function(e) {
-        e.stopPropagation(); // Evita que el clic se pase al body
+        e.stopPropagation();
         $(this).toggleClass('activo');
         $('body').toggleClass('modal-open');
     });
 
-    // 3. CERRAR AL HACER CLIC FUERA
     $(document).click(function() {
         $('.card-zoom').removeClass('activo');
         $('body').removeClass('modal-open');

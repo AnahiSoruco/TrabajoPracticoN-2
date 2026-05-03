@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo Jujuy</title>
 
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-    <!-- LAS RUTAS DEBEN SER ESTAS -->
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     
@@ -16,7 +15,6 @@
 
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Turismo Jujuy</a>
@@ -26,10 +24,10 @@
             </button>
 
             <div class="collapse navbar-collapse" id="menu">
-                <!-- Cambiamos nav-lateral por navbar-nav ms-auto para alinearlo a la derecha -->
+                
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <!-- El active va acá en el index -->
+                        
                         <a class="nav-link active" href="index.html"><i class="fas fa-home"></i> Inicio</a>
                     </li>
                     <li class="nav-item">
@@ -50,24 +48,20 @@
             </div>
         </div>
     </nav>
-
-
-    <!-- Video Hero Section -->
+    
     <section class="video-box">
-        <!-- El video va primero -->
+        
         <video autoplay muted loop playsinline class="video-fondo">
             <source src="Videos/Paise.mp4" type="video/mp4">
         </video>
 
-        <!-- El texto va después, para que el z-index lo suba -->
+        
         <div class="texto-video">
             <h1 class="titulo-animado">Bienvenido a Jujuy</h1>
             <p class="subtitulo-animado">Descubre lugares increíbles</p>
         </div>
     </section>
-
-
-    <!-- Cards Section -->
+    
     <section class="container my-5">
         <div class="row g-4">
             <div class="col-12 col-md-4">
@@ -100,12 +94,11 @@
         </div>
     </section>
 
-    <!-- Contador con jQuery -->
     <div class="text-center my-5 py-4">
         <h2 id="contador">0</h2>
         <p>Visitantes felices</p>
     </div>
-        <!-- Carousel Bootstrap: testimonios -->
+        
     <div id="carouselTestimonios" class="carousel slide container my-5" data-bs-ride="carousel">
         <div class="carousel-inner text-center">
             
@@ -127,10 +120,10 @@
     </div>
 
     <footer class="footer-site">
-    <div class="container"> <!-- El container centra todo -->
-        <div class="row text-center text-md-start"> <!-- La fila permite poner columnas lado a lado -->
+    <div class="container">
+        <div class="row text-center text-md-start"> 
             
-            <!-- Suscríbete -->
+
             <div class="col-12 col-md-4 mb-4 mb-md-0">
                 <h3>Suscríbete</h3>
                 <p>Recibe ofertas de Jujuy en tu mail.</p>
@@ -140,7 +133,6 @@
                 </form>
             </div>
 
-            <!-- Síguenos -->
             <div class="col-12 col-md-4 mb-4 mb-md-0">
                 <h3>Síguenos</h3>
                 <ul class="social-3d">
@@ -150,7 +142,7 @@
                 </ul>
             </div>
 
-            <!-- Ubicación -->
+            
             <div class="col-12 col-md-4">
                 <h3>Ubicación</h3>
                 <div class="map-container">
@@ -161,8 +153,7 @@
         </div>
     </div>
 </footer>
-
-    <!-- SCRIPTS LOCALES (Orden Correcto) -->
+ 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/Animacion-Index.js"></script>

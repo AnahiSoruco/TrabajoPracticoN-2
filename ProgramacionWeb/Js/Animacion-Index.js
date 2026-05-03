@@ -1,4 +1,3 @@
-// --- INTERACTIVIDAD BOTONES 3D (REDES SOCIALES) ---
 const botones3D = document.querySelectorAll('.social-3d li');
 
 if (botones3D.length > 0) {
@@ -33,7 +32,6 @@ if (botones3D.length > 0) {
     });
 }
 
-// --- FORMULARIO NEWSLETTER ---
 const form = document.querySelector('.newsletter-form');
 if (form) {
     form.addEventListener('submit', (e) => {
@@ -45,16 +43,13 @@ if (form) {
     });
 }
 
-// --- ANIMACIONES CON JQUERY ---
 $(document).ready(function() {
 
-    // 1. ANIMACIÓN DE BIENVENIDA (Home)
     if ($(".titulo-animado").length) {
         $(".titulo-animado").hide().fadeIn(2000);
         $(".subtitulo-animado").hide().delay(1000).fadeIn(2000);
     }
 
-    // 2. CONTADOR DE VISITANTES (Index)
     if ($("#contador").length) {
         let valorObjetivo = 1452; 
         $({ contador: 0 }).animate({ contador: valorObjetivo }, {
@@ -69,7 +64,6 @@ $(document).ready(function() {
         });
     }
 
-    // 3. CAROUSEL DE TESTIMONIOS (Bootstrap 5)
     const carouselEl = document.querySelector('#carouselTestimonios');
     if (carouselEl) {
         new bootstrap.Carousel(carouselEl, {
@@ -79,7 +73,6 @@ $(document).ready(function() {
         });
     }
 
-    // 4. FILTROS DINÁMICOS (Página Destinos)
     $('.filtro').click(function() {
         const cat = $(this).data('filter');
         $('.filtro').removeClass('btn-primary active').addClass('btn-outline-info');
@@ -94,8 +87,6 @@ $(document).ready(function() {
         });
     });
 
-    // 5. EFECTO ZOOM (Página Destinos)
-    // Se asegura de no interferir con las cards de Agencias
     $('.card').click(function(e) {
         if ($(this).find('.card-inner').length === 0) {
             e.stopPropagation();
@@ -104,22 +95,17 @@ $(document).ready(function() {
         }
     });
 
-    // --- SECCIÓN AGENCIAS (AUMENTO) ---
-
-    // 6. GIRO DE TARJETA (Efecto Flip)
     $('.card-inner').click(function(e) {
         e.stopPropagation();
         $(this).toggleClass('girar');
     });
 
-    // 7. SISTEMA DE RATING (Estrellas corregido)
     $('.rating i').click(function(e) {
-        e.stopPropagation(); // Evita que la tarjeta gire al votar
+        e.stopPropagation();
         
         let valorSeleccionado = $(this).data('value');
         let todasLasEstrellas = $(this).parent().children('i');
 
-        // Pintamos todas las estrellas que tengan un valor menor o igual a la clickeada
         todasLasEstrellas.each(function() {
             if ($(this).data('value') <= valorSeleccionado) {
                 $(this).addClass('active');
@@ -131,7 +117,6 @@ $(document).ready(function() {
         console.log("Calificación guardada: " + valorSeleccionado);
     });
 
-    // 8. CONTROLES DE CIERRE (Esc o Clic fuera)
     $(document).click(function() {
         $('.card').removeClass('expandida');
         $('body').removeClass('no-scroll');
@@ -150,16 +135,12 @@ $(document).ready(function() {
 
 
 
-        /* --- AUMENTO PARA AGENCIAS (FLIP Y RATING) --- */
-
-    // 1. Efecto Flip (Giro al hacer clic)
-    // Usamos el contenedor '.card' que es el que envuelve al 'card-inner'
+    
     $('.card').click(function() {
         $(this).find('.card-inner').toggleClass('girar');
         console.log("Girando agencia...");
     });
 
-    // 2. Sistema de estrellas (Rating)
     $('.rating i').click(function(e) {
         e.stopPropagation(); // IMPORTANTE: evita que la carta gire al calificar
         
@@ -172,16 +153,13 @@ $(document).ready(function() {
         
         console.log("Calificación: " + valor);
     });
-    //Precio
-    // --- 2. SECCIÓN PRECIOS (Hover y Tooltips) ---
     
-    // Inicializar Tooltips de Bootstrap 5
+    
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
 
-    // Hover dinámico en las filas de la tabla
     $(".fila").hover(
         function() {
             $(this).css({
