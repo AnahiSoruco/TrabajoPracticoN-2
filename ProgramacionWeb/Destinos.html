@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <title>Destinos</title>
   <!-- Font Awesome -->
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
   <!-- LAS RUTAS DEBEN SER ESTAS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="Css/estilo.css">
 </head>
 <body class="bg-dark text-white">
 
@@ -64,36 +65,36 @@
         <div class="row g-4">
             
           <!-- Ejemplo de Card Naturaleza -->
-          <div class="col-12 col-md-6 col-lg-4 destino naturaleza"> 
-            <div class="card" tabindex="0">
-              <img src="Imagenes/Salinas.jpeg" class="card-img-top" alt="Salinas">
+          <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+            <div class="card card-zoom" tabindex="0">
+              <!-- Div que carga el Sprite de Naturaleza -->
+              <div class="sprite-naturaleza salinas"></div>
               <div class="card-body">
                 <h5 class="card-title">Salinas Grandes</h5>
-                <p class="card-text">Las Salinas Grandes de Jujuy son uno de los salares más extensos y espectaculares de Argentina, situados en la región de la Puna a más de 3.350 metros sobre el nivel del mar, cubriendo un área de más de 200 \(\text{km}^{2}\) entre las provincias de Jujuy y Salta. Es un vasto desierto blanco, fruto de la evaporación de agua salada hace millones de años, y un importante destino turístico conocido por sus "ojos" de agua, piletones de sal y paisaje fotogénico.</p>
+                <p class="card-text">Un vasto desierto blanco, fruto de la evaporación de agua salada hace millones de años.</p>
               </div>
             </div>
           </div>
-        <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
-          <div class="card zoom-card" tabindex="0">
-            <img src="Imagenes/Serranías del Hornocal.jpeg" class="card-img-top">
-            
-            <div class="card-body">
-              <h5 class="card-title">Serranías del Hornocal</h5>
-              <p class="card-text"> Conocidas como el Cerro de los 14 Colores, las Serranías del Hornocal son un imponente anfiteatro natural ubicado a 25 kilómetros de Humahuaca. A más de 4.300 metros de altura, sus formaciones en punta de flecha despliegan un abanico de tonalidades que van desde el amarillo y el verde hasta el rojo intenso, creando uno de los paisajes más dramáticos y bellos de toda la Argentina </p>
+
+          <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+            <div class="card card-zoom" tabindex="0">
+              <div class="sprite-naturaleza hornocal"></div>
+              <div class="card-body">
+                <h5 class="card-title">Serranías del Hornocal</h5>
+                <p class="card-text"> Conocidas como el Cerro de los 14 Colores, las Serranías del Hornocal son un imponente anfiteatro natural ubicado a 25 kilómetros de Humahuaca. A más de 4.300 metros de altura, sus formaciones en punta de flecha despliegan un abanico de tonalidades que van desde el amarillo y el verde hasta el rojo intenso, creando uno de los paisajes más dramáticos y bellos de toda la Argentina </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
-          <div class="card zoom-card" tabindex="0">
-            <img src="Imagenes/Cascada de Yala.jpeg" class="card-img-top">
-
-            <div class="card-body">
-              <h5 class="card-title"> Cascadas de Yala </h5>
-              <p class="card-text"> Sumergite en el 'lado verde' de Jujuy. A pocos kilómetros de la capital, las Cascadas de Yala —como la famosa Cascada de La Horqueta— ofrecen un refugio de paz en medio de las yungas. Con saltos de agua cristalina que caen entre paredes de roca y una vegetación exuberante, es el destino perfecto para quienes buscan un trekking refrescante y una conexión directa con la selva de montaña. </p>
+          <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+            <div class="card card-zoom" tabindex="0">
+              <div class="sprite-naturaleza cascada"></div>
+              <div class="card-body">
+                <h5 class="card-title"> Cascadas de Yala </h5>
+                <p class="card-text"> Sumergite en el 'lado verde' de Jujuy. A pocos kilómetros de la capital, las Cascadas de Yala —como la famosa Cascada de La Horqueta— ofrecen un refugio de paz en medio de las yungas. Con saltos de agua cristalina que caen entre paredes de roca y una vegetación exuberante, es el destino perfecto para quienes buscan un trekking refrescante y una conexión directa con la selva de montaña. </p>
+              </div>
             </div>
           </div>
-        </div>
 
         <div class="col-12 col-md-6 col-lg-4 destino cultural">
           <div class="card zoom-card" tabindex="0">
@@ -118,9 +119,8 @@
         </div>
 
         <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
-          <div class="card zoom-card" tabindex="0">
-            <img src="Imagenes/Quebrada de las Señoritas.jpg" class="card-img-top">
-
+          <div class="card card-zoom" tabindex="0">
+            <div class="sprite-naturaleza quebrada"></div>
             <div class="card-body">
               <h5 class="card-title">Quebrada de las Señoritas</h5>
               <p class="card-text">Un laberinto de formaciones rojas intensas que parecen sacadas del planeta Marte. Ubicada en el pueblo de Uquía, la Quebrada de las Señoritas es uno de los tesoros más impresionantes y menos masificados de Jujuy. Entre cañadones profundos y grietas tectónicas, sus paredes de color óxido guardan una leyenda ancestral sobre princesas incas y tesoros ocultos, ofreciendo una experiencia de trekking única bajo el cielo azul de la Puna.</p>
@@ -253,9 +253,8 @@
             </div>
 
               <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
-                <div class="card zoom-card" tabindex="0">
-                  <img src="Imagenes/Monumento Natural Laguna de los Pozuelos.jpg" class="card-img-top">
-
+                <div class="card card-zoom" tabindex="0">
+                  <div class="sprite-naturaleza laguna"></div>
                   <div class="card-body">
                   <h5 class="info">Monumento Natural Laguna de los Pozuelos</h5>
                     <p class="card-text"> Un oasis de vida en la inmensidad de la Puna. A 3.600 metros de altura, la Laguna de los Pozuelos es uno de los humedales más importantes del mundo y hogar de miles de flamencos rosados. Este espejo de agua, rodeado de cerros áridos, es un santuario de biodiversidad donde el silencio solo es interrumpido por el canto de las aves, ofreciendo uno de los paisajes más salvajes y conmovedores del extremo norte argentin </p>
@@ -265,9 +264,8 @@
               
               
               <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
-                <div class="card zoom-card" tabindex="0">
-                  <img src="Imagenes/Cuesta del Lipán.jpg" class="card-img-top">
-
+                <div class="card card-zoom" tabindex="0">
+                  <div class="sprite-naturaleza lipan"></div>
                   <div class="card-body">
                   <h5 class="info">Cuesta del Lipán </h5>
                     <p class="card-text"> Considerada una de las carreteras más espectaculares de Argentina, la Cuesta del Lipán es un zigzagueante camino de asfalto que trepa la montaña hasta alcanzar los 4.170 metros de altura. Con curvas cerradas que parecen pinceladas en el cerro, este tramo de la Ruta 52 une el pueblo de Purmamarca con las Salinas Grandes, ofreciendo vistas panorámicas vertiginosas y la increíble sensación de estar tocando las nubes </p>

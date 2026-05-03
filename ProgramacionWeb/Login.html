@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Turismo Jujuy</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    
+    <!-- LAS RUTAS DEBEN SER ESTAS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Css/style-login.css">
+</head>
+<body class="bg-black">
+
+    <section class="contacto d-flex justify-content-center align-items-center vh-100">
+        <div class="form-pro text-center">
+            
+            <!-- Solapas para cambiar entre Login y Registro -->
+            <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab">
+                <li class="nav-item">
+                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-login">Entrar</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-registro">Crear Cuenta</button>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <!-- FORMULARIO LOGIN -->
+                <div class="tab-pane fade show active" id="pills-login">
+                    <form id="formLogin">
+                        <h3 class="text-info mb-4">Iniciar Sesión</h3>
+                        <input type="text" id="userLog" class="form-control mb-3 bg-transparent text-white" placeholder="Usuario" required pattern="[A-Za-z0-9]{4,12}">
+                        <input type="password" id="passLog" class="form-control mb-4 bg-transparent text-white" placeholder="Contraseña" required>
+                        <button type="submit" class="btn btn-info w-100 fw-bold">INGRESAR</button>
+                    </form>
+                </div>
+
+                <!-- FORMULARIO REGISTRO -->
+                <div class="tab-pane fade" id="pills-registro">
+                    <form id="formRegistro">
+                        <h3 class="text-success mb-4">Registro Seguro</h3>
+                        <input type="text" id="userReg" class="form-control mb-3 bg-transparent text-white border-success" placeholder="Elige un usuario" required pattern="[A-Za-z0-9]{4,12}">
+                        <input type="password" id="passReg" class="form-control mb-4 bg-transparent text-white border-success" placeholder="Crea una clave" required>
+                        <button type="submit" class="btn btn-success w-100 fw-bold">REGISTRARME</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Botón Phishing (Consigna 7) -->
+            <div class="mt-4 border-top pt-3 border-secondary">
+                <a href="#" class="text-warning small text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalPhishing">
+                    <i class="fas fa-shield-alt"></i> Seguridad: ¿Cómo evito estafas?
+                </a>
+            </div>
+            <div class="spinner-border text-info d-none mt-3" id="spinner"></div>
+        </div>
+    </section>
+
+    <!-- MODAL PHISHING (Punto 3 - Educativo) -->
+    <div class="modal fade" id="modalPhishing" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white border-warning">
+                <div class="modal-header border-warning">
+                    <h5 class="modal-title text-warning">🛡️ Guía Anti-Phishing</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <p><strong>Educación:</strong> El Phishing es un engaño visual. Antes de entrar, verificá:</p>
+                    <ul>
+                        <li>La URL debe ser <strong>turismojujuy.com</strong>.</li>
+                        <li>Nunca pedimos claves por WhatsApp o Email.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Animacion-Login.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.form-pro {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    width: 100%;
+    max-width: 380px;
+}
+
+.input-group input {
+    background: transparent !important;
+    border: none;
+    border-bottom: 2px solid #333;
+    color: white !important;
+    border-radius: 0;
+}
+
+.input-group input:focus {
+    box-shadow: none;
+    border-bottom: 2px solid #00d2ff;
+}
+
+.modal-content {
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);
+}
